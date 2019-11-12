@@ -54,6 +54,9 @@ public class FrequencyGraphView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        if (values.size() == 0) {
+            return;
+        }
 
         float width = getWidth();
         int valuesCount = values.size();
